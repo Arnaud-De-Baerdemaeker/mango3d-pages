@@ -1,0 +1,112 @@
+@import "./../../components/scss-components/index.module.scss";
+
+.intro__container // <div>
+{
+    padding-top: 50px;
+    background-color: #e2e2e2;
+
+    .intro__row1 // <div>
+    {
+        width: 80%;
+        margin: 0 auto 0 auto;
+        padding-bottom: 20px;
+
+        .intro__lychee // <p>
+        {
+            font-family: $OpenSans;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .intro__slicer // <p>
+        {
+            font-family: $OpenSans;
+            margin: 0;
+            text-align: center;
+        }
+    }
+
+    .intro__row2 // <div>
+    {
+        padding-top: 9px;
+        margin: 48px auto 0 auto;
+        width: 80%;
+
+        .intro__imageContainer // <figure>
+        {
+            float: left;
+            width: 64.833%;
+            margin: 0 5.5% 0 0;
+
+            .intro__image // <img>
+            {
+                width: 100%;
+            }
+
+            .intro__imageCaption // <figcaption>
+            {
+                font-family: $OpenSans;
+                font-size: 12px;
+                text-align: right;
+
+                .intro__captionLink // <a>
+                {
+                    color: #edb059;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .intro__presentation // <div>
+        {
+            margin-bottom: 9.27%;
+
+            .intro__easy, .intro__automatic, .intro__supports, .intro__control, .intro__printers // <div>
+            {
+                margin-bottom: 2%;
+
+                .intro__easyTitle, .intro__automaticTitle, .intro__supportsTitle, .intro__controlTitle, .intro__printersTitle // <h2>
+                {
+                    margin: 0;
+                    padding-bottom: 10px;
+                    font-family: $montserrat;
+                    font-weight: 600;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    color: #333333;
+                }
+
+                .intro__easyText, .intro__automaticText, .intro__supportsText, .intro__controlText, .intro__printersText // <p>
+                {
+                    margin: 0;
+                    font-family: $OpenSans;
+                    font-size: 15px;
+                }
+            }
+
+            .intro__printers // <div>
+            {
+                margin: 0;
+            }
+        }
+    }
+
+    .intro__whatsNew // <div>
+    {
+        width: 80%;
+        margin: 0 auto 0 auto;
+        text-align: center;
+        padding-bottom: 2%;
+
+        .intro__whatsNewLink // <a>
+        {
+            font-size: 31px;
+            color: white;
+            background-color: #d1515c;
+            text-decoration: none;
+            padding: 0.3em 0.7em 0.3em 2em;
+            border-radius: 3px;
+            font-family: $OpenSans;
+        }
+    }
+}
