@@ -1,0 +1,114 @@
+@import "./index.module.scss";
+
+.headerContainer // <header>
+{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 80px;
+    background-color: #383838;
+
+    .headerContainer__subContainer // <div>
+    {
+        display: flex;
+        width: 80vw;
+        height: inherit;
+        margin: 0 auto 0 auto;
+
+        .headerContainer__logo // <div>
+        {
+            display: flex;
+            width: 50%;
+            height: inherit;
+            align-items: center;
+        }
+
+        .headerContainer__menu // <div>
+        {
+            display: flex;
+            width: 50%;
+            height: inherit;
+            justify-content: right;
+            
+            .headerContainer__navigation // <nav>
+            {
+                display: flex;
+                // align-self: center;
+                height: inherit;
+                
+                .headerContainer__lvl1List // <ul>
+                {
+                    display: flex;
+                    height: inherit;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+
+                    .headerContainer__lvl1ListItem // <li>
+                    {
+                        height: inherit;
+                        line-height: 80px;
+                        padding-right: 22px;
+                        
+                        .headerContainer__lvl1Link // <a>
+                        {
+                            display: block;
+                            @include header-menu-link;
+                            height: inherit;
+                        }
+                    }
+
+                    .headerContainer__lvl1ListItem2 // <li>
+                    {
+                        height: inherit;
+                        line-height: 80px;
+                        padding-right: 22px;
+
+                        .headerContainer__lvl1Link2 // <a>
+                        {
+                            display: block;
+                            @include header-menu-link;
+                            height: inherit;
+                        }
+
+                        .headerContainer__lvl2ListHidden // <ul>
+                        {
+                            position: absolute;
+                            right: 100vw;
+                            opacity: 0;
+                        }
+                        
+                        .headerContainer__lvl2ListDisplayed // <ul>
+                        {
+                            position: absolute;
+                            width: 240px;
+                            background-color: #383838;
+                            list-style: none;
+                            padding-top: 20px;
+                            padding-bottom: 20px;
+                            padding-left: 0;
+                            border-top-style: solid;
+                            border-top-width: 3px;
+                            border-top-color: #f7b500;
+                            
+                            .headerContainer__lvl2ListItem // <li>
+                            {
+                                padding-right: 20px;
+                                padding-left: 20px;
+                                line-height: 2em;
+
+                                .headerContainer__lvl2Link // <a>
+                                {
+                                    @include header-menu-link;
+                                    display: block;
+                                    width: 200px;
+                                    padding: 6px 20px 6px 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
