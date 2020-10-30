@@ -15,7 +15,9 @@ function LycheeSlicer() {
     return (
         <>
             <style jsx global>
-                {"*{ box-sizing: border-box; } body{ margin: 0px; }"}
+                {
+                    "*{ box-sizing: border-box; } body{ margin: 0px; color: rgb(102, 102, 102); -webkit-font-smoothing: antialiased; font-weight: 500; }"
+                }
             </style>
             <Header />
             <main className={styles.mainContainer}>
