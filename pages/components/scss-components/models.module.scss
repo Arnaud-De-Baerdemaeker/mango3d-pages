@@ -1,0 +1,37 @@
+@import "./index.module.scss";
+
+.models__imageContainer // <figure>
+{
+    margin: 0;
+
+    .models__image // <img>
+    {
+        width: 100%;
+    }
+
+    .models__imageCaption // <figcaption>
+    {
+        text-align: right;
+        font-family: $OpenSans;
+        font-size: 10px;
+        color: #303030;
+        padding-bottom: 8px;
+
+        .models__imageLink // <a>
+        {
+            text-decoration: none;
+            color: #edb059;
+        }
+    }
+}
+
+.models__title // <h3>
+{
+    font-family: $montserrat;
+    font-size: 20px;
+    color: #303030;
+    margin: 0;
+    text-align: center;
+    padding-top: 7px;
+    font-weight: 500;
+}

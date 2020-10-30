@@ -1,0 +1,51 @@
+@import "./index.module.scss";
+
+.industries // <div>
+{
+    padding: 4% 0;
+
+    .industries__intro // <div>
+    {
+        padding: 2% 0;
+        width: 80%;
+        margin: 0 auto 0 auto;
+
+        .industries__titleContainer // <div>
+        {
+            margin-bottom: 12px;
+            text-align: center;
+
+            .industries__title // <h2>
+            {
+                margin: 0;
+                padding: 0 0 12px 0;
+                font-family: $montserrat;
+                font-size: 37px;
+                color: #141414;
+                font-weight: 500;
+            }
+        }
+
+        .industries__textContainer // <div>
+        {
+            text-align: center;
+
+            .industries__text // <p>
+            {
+                margin: 0;
+                font-family: $OpenSans;
+            }
+        }
+    }
+
+    .industries__models // <div>
+    {
+        padding: 2% 0;
+        width: 80%;
+        margin: 0 auto 0 auto;
+        display: grid;
+        grid-template-columns: 20.875% 20.875% 20.875% 20.875%;
+        grid-gap: 5.5%;
+        justify-content: stretch;
+    }
+}
