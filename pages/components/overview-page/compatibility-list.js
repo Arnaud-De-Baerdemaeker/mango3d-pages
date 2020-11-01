@@ -1,9 +1,12 @@
 import React from "react";
 import Link from "next/link";
 
+import ArrowDivider from "./../general-components/divider-arrow";
+
 function CompatibilityList() {
     return (
         <div>
+            <ArrowDivider />
             <div>
                 <div>
                     <h2>{"Lychee 3D Printers Compatibility list"}</h2>
