@@ -1,0 +1,44 @@
+@import "./index.module.scss";
+
+.models // <div>
+{
+    .models__intro // <div>
+    {
+        margin-bottom: 41.906px;
+        .models__titleContainer // <div>
+        {
+            .models__title // <h2>
+            {
+                font-family: $montserrat;
+                font-size: 20px;
+                color: #141414;
+                padding-bottom: 10px;
+                line-height: 1em;
+                font-weight: 500;
+            }
+        }
+
+        .models__textContainer // <div>
+        {
+            .models__text // <p>
+            {
+                margin: 0;
+                font-family: $OpenSans;
+                color: #2d2d2d;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .models__model // <div>
+    {
+        .models__imageContainer // <figure>
+        {
+            margin: 0;
+            .models__image // <img>
+            {
+                width: 100%;
+            }
+        }
+    }
+}
