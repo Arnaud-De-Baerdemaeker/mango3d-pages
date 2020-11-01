@@ -1,0 +1,77 @@
+@import "./index.module.scss";
+
+.footer // <div>
+{
+    background-color: #0a0a0a;
+    padding-top: 20px;
+    padding-bottom: 22px;
+
+    .footer__titleContainer // <div>
+    {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 9px;
+        padding-bottom: 11px;
+        
+        .footer__title // <p>
+        {
+            font-size: 15px;
+            color: #919191;
+            font-family: $OpenSans;
+            margin: 0;
+            text-align: center;
+            font-style: italic;
+        }
+    }
+
+    .footer__intro // <div>
+    {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 26px;
+        display: grid;
+        grid-template-columns: 29.667% 29.667% 29.667%;
+        grid-gap: 5.5%;
+
+        .footer__mangoCopyrightContainer // <div>
+        {
+            .footer__mangoCopyrightText // <p>
+            {
+                margin: 0;
+                color: #919191;
+                font-size: 13px;
+                font-family: $OpenSans;
+                line-height: 1.7em;
+            }
+        }
+
+        .footer__linksContainer // <div>
+        {
+            .footer__list // <ul>
+            {
+                margin-top: 0;
+
+                .footer__listItem // <li>
+                {
+                    .footer__link // <a>
+                    {
+                        color: #edb059;
+                        line-height: 1.7em;
+                        font-family: $OpenSans;
+                        font-size: 14px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer__networks // <div>
+    {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
