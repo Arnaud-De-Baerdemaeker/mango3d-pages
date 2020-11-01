@@ -1,0 +1,17 @@
+.backToTop // <div>
+{
+    position: fixed;
+    right: 0;
+    bottom: 125px;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 40px;
+    height: 40px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    line-height: 1em;
+}
