@@ -1,0 +1,28 @@
+.networks // <nav>
+{
+    margin-top: 2.75%;
+
+
+    .networks__list // <ul>
+    {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding-left: 0;
+
+        .networks__listItem // <li>
+        {
+            margin-top: 8px;
+            padding-right: 11px;
+            padding-left: 11px;
+
+            .networks__link // <a>
+            {
+                padding-bottom: 8px;
+                color: #e8ac17;
+                font-size: 32px;
+            }
+        }
+    }
+}
