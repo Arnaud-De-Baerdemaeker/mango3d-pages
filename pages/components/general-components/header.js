@@ -182,7 +182,7 @@ export default function Header() {
                                 className={
                                     styles.headerContainer__lvl1ListItem
                                 }>
-                                <Link href={"/pages/downloads"}>
+                                <Link href={"/downloads"}>
                                     <a
                                         className={
                                             styles.headerContainer__lvl1Link
