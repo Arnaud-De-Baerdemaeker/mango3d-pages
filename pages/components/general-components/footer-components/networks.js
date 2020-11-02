@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Link from "next/link";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faRss} from "@fortawesome/free-solid-svg-icons";
@@ -13,9 +13,23 @@ import {
 
 import styles from "./../../scss-components/networks.module.scss";
 
-function Networks() {
+function Networks({isOpen}) {
+    const [width, setWidth] = useState();
+
+    useEffect(() => {
+        setWidth(window.innerWidth);
+    }, []);
+
+    const handleDisplayOnWidth = () => {
+        if (width <= 980) {
+            return isOpen ? styles.networks : styles.networksHidden;
+        }
+
+        return styles.networks;
+    };
+
     return (
-        <nav className={styles.networks}>
+        <nav className={handleDisplayOnWidth()}>
             <ul className={styles.networks__list}>
                 <li className={styles.networks__listItem}>
                     <Link href={"#"}>
