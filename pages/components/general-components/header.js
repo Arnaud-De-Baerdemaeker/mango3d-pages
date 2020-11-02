@@ -36,6 +36,16 @@ export default function Header() {
         setIsOpen(!isOpen);
     };
 
+    const handleMenuDisplay = () => {
+        if (width <= 980) {
+            return isOpen
+                ? styles.headerContainer__navigation
+                : styles.headerContainer__navigationHidden;
+        }
+
+        return styles.headerContainer__navigation;
+    };
+
     return (
         <header className={styles.headerContainer}>
             <div className={styles.headerContainer__subContainer}>
@@ -59,12 +69,7 @@ export default function Header() {
                             className={styles.headerContainer__icon}
                         />
                     </div>
-                    <nav
-                        className={
-                            isOpen
-                                ? styles.headerContainer__navigation
-                                : styles.headerContainer__navigationHidden
-                        }>
+                    <nav className={handleMenuDisplay()}>
                         <ul className={styles.headerContainer__lvl1List}>
                             <li
                                 className={
