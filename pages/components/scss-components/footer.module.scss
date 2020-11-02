@@ -71,11 +71,37 @@
             }
         }
 
+        .footer__hamburgerIconContainer // <div>
+        {
+            text-align: center;
+
+            .footer__hamburgerIcon // <div>
+            {
+                width: 30px;
+                height: 30px;
+                color: #edb059;
+            }
+        }
+
+        .footer__hamburgerIconContainerHidden // <div>
+        {
+            position: absolute;
+            right: 100vw;
+            opacity: 0;
+        }
+
         .footer__networks // <div>
         {
             width: 80%;
             margin-right: auto;
             margin-left: auto;
+        }
+
+        .footer__networksHidden // <div>
+        {
+            position: absolute;
+            width: 100vw;
+            opacity: 0;
         }
     }
 }
@@ -152,6 +178,11 @@
                     }
                 }
             }
+        }
+
+        .footer__hamburgerIconContainerHidden // <div>
+        {
+            display: none;
         }
 
         .footer__networks // <div>
