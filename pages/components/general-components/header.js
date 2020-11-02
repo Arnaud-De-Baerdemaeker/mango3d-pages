@@ -1,10 +1,40 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Link from "next/link";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faBars} from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./../scss-components/header.module.scss";
 
 export default function Header() {
     const [isHovered, setIsHovered] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [width, setWidth] = useState();
+
+    useEffect(() => {
+        setWidth(window.innerWidth);
+    }, []);
+
+    const displayBurgerIcon = () => {
+        if (width <= 980) {
+            return styles.headerContainer__hamburgerIcon;
+        }
+
+        return styles.headerContainer__hamburgerIconHidden;
+    };
+
+    const setClassName = () => {
+        if (width >= 981) {
+            return isHovered
+                ? styles.headerContainer__lvl2ListDisplayed
+                : styles.headerContainer__lvl2ListHidden;
+        }
+
+        return styles.headerContainer__lvl2List;
+    };
+
+    const handleClick = () => {
+        setIsOpen(!isOpen);
+    };
 
     return (
         <header className={styles.headerContainer}>
@@ -17,12 +47,24 @@ export default function Header() {
                                     "/xmango_logo_web2.png.pagespeed.ic.LGIZWcBDYU.webp"
                                 }
                                 alt={"Mango 3D"}
+                                className={styles.headerContainer__image}
                             />
                         </a>
                     </Link>
                 </div>
                 <div className={styles.headerContainer__menu}>
-                    <nav className={styles.headerContainer__navigation}>
+                    <div className={displayBurgerIcon()} onClick={handleClick}>
+                        <FontAwesomeIcon
+                            icon={faBars}
+                            className={styles.headerContainer__icon}
+                        />
+                    </div>
+                    <nav
+                        className={
+                            isOpen
+                                ? styles.headerContainer__navigation
+                                : styles.headerContainer__navigationHidden
+                        }>
                         <ul className={styles.headerContainer__lvl1List}>
                             <li
                                 className={
@@ -39,10 +81,18 @@ export default function Header() {
                             </li>
                             <li
                                 onMouseOver={() => {
-                                    setIsHovered(true);
+                                    if (width >= 981) {
+                                        return setIsHovered(true);
+                                    }
+
+                                    return null;
                                 }}
                                 onMouseLeave={() => {
-                                    setIsHovered(false);
+                                    if (width >= 981) {
+                                        return setIsHovered(false);
+                                    }
+
+                                    return null;
                                 }}
                                 className={
                                     styles.headerContainer__lvl1ListItem2
@@ -55,12 +105,7 @@ export default function Header() {
                                         {"Lychee Slicer"}
                                     </a>
                                 </Link>
-                                <ul
-                                    className={
-                                        isHovered
-                                            ? styles.headerContainer__lvl2ListDisplayed
-                                            : styles.headerContainer__lvl2ListHidden
-                                    }>
+                                <ul className={setClassName()}>
                                     <li
                                         className={
                                             styles.headerContainer__lvl2ListItem
