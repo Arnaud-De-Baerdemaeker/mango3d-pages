@@ -1,11 +1,40 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Link from "next/link";
+import Networks from "./footer-components/networks";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faBars} from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./../scss-components/footer.module.scss";
 
-import Networks from "./footer-components/networks";
-
 function Footer() {
+    // const [isDisplayed, setIsDisplayed] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [width, setWidth] = useState();
+
+    useEffect(() => {
+        setWidth(window.innerWidth);
+    }, []);
+
+    const handleClick = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const handleBurgerDisplay = () => {
+        if (width <= 980) {
+            return styles.footer__hamburgerIconContainer;
+        }
+        return styles.footer__hamburgerIconContainerHidden;
+    };
+
+    const handleDisplayOnWidth = () => {
+        if (width <= 980) {
+            return isOpen
+                ? styles.footer__networks
+                : styles.footer__networksHidden;
+        }
+        return styles.footer__networks;
+    };
+
     return (
         <div className={styles.footer}>
             <div className={styles.footer__titleContainer}>
@@ -60,8 +89,17 @@ function Footer() {
                     </ul>
                 </div>
             </div>
-            <div className={styles.footer__networks}>
-                <Networks />
+            <div
+                onClick={handleClick}
+                className={handleBurgerDisplay()}
+                onScree>
+                <FontAwesomeIcon
+                    icon={faBars}
+                    className={styles.footer__hamburgerIcon}
+                />
+            </div>
+            <div className={handleDisplayOnWidth()}>
+                <Networks isOpen={isOpen} />
             </div>
         </div>
     );
