@@ -204,6 +204,11 @@
                 width: 50%;
                 height: inherit;
                 justify-content: right;
+
+                .headerContainer__hamburgerIconHidden // <div>
+                {
+                    display: none;
+                }
                 
                 .headerContainer__navigation // <nav>
                 {
