@@ -1,108 +1,284 @@
 @import "./index.module.scss";
 
-.headerContainer // <header>
+@media (max-width: 980px)
 {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 80px;
-    background-color: #383838;
-
-    .headerContainer__subContainer // <div>
+    .headerContainer // <header>
     {
-        display: flex;
-        width: 80vw;
-        height: inherit;
-        margin: 0 auto 0 auto;
+        position: relative;
+        z-index: 1;
+        top: 0;
+        width: 100vw;
+        height: 80px;
+        background-color: #383838;
 
-        .headerContainer__logo // <div>
+        .headerContainer__subContainer // <div>
         {
             display: flex;
-            width: 50%;
+            position: relative;
+            width: 80vw;
             height: inherit;
-            align-items: center;
-        }
+            margin: 0 auto 0 auto;
 
-        .headerContainer__menu // <div>
-        {
-            display: flex;
-            width: 50%;
-            height: inherit;
-            justify-content: right;
-            
-            .headerContainer__navigation // <nav>
+            .headerContainer__logo // <div>
             {
                 display: flex;
-                // align-self: center;
+                width: 55%;
                 height: inherit;
-                
-                .headerContainer__lvl1List // <ul>
-                {
-                    display: flex;
-                    height: inherit;
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
+                align-items: center;
 
-                    .headerContainer__lvl1ListItem // <li>
+                .headerContainer__image // <img>
+                {
+                    width: 100%;
+                }
+            }
+
+            .headerContainer__menu // <div>
+            {
+                width: 45%;
+                // height: inherit;
+                // justify-content: right;
+                display: flex;
+                justify-content: right;
+
+                .headerContainer__hamburgerIcon // <div>
+                {
+                    // position: absolute;
+                    // right: 0;
+                    // top: 50%;
+                    align-self: center;
+                    cursor: pointer;
+
+                    .headerContainer__icon
                     {
-                        height: inherit;
-                        line-height: 80px;
-                        padding-right: 22px;
-                        
-                        .headerContainer__lvl1Link // <a>
+                        width: 30px;
+                        height: 30px;
+                        color: #edb059;
+                    }
+                }
+
+                .headerContainer__hamburgerIconHidden // <div>
+                {
+                    position: relative;
+                    right: 100vw;
+                    z-index: 9999;
+                }
+                
+                .headerContainer__navigation // <nav>
+                {
+                    // height: inherit;
+                    
+                    .headerContainer__lvl1List // <ul>
+                    {
+                        // display: flex;
+                        // height: inherit;
+                        position: absolute;
+                        top: 79px;
+                        left: 0;
+                        width: 100%;
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        background-color: #383838;
+                        border-top-style: solid;
+                        border-top-width: 3px;
+                        border-top-color: #edb059;
+                        padding: 5%;
+
+                        .headerContainer__lvl1ListItem // <li>
                         {
-                            display: block;
-                            @include header-menu-link;
-                            height: inherit;
+                            // height: inherit;
+                            // line-height: 80px;
+                            // padding-right: 22px;
+                            
+                            .headerContainer__lvl1Link // <a>
+                            {
+                                display: block;
+                                @include header-menu-link;
+                                padding: 5%;
+                                font-size: 14px;
+                                font-weight: 500;
+                                // height: inherit;
+                            }
+                        }
+
+                        .headerContainer__lvl1ListItem2 // <li>
+                        {
+                            // height: inherit;
+                            // line-height: 80px;
+                            // padding-right: 22px;
+                            padding-left: 5%;
+
+                            .headerContainer__lvl1Link2 // <a>
+                            {
+                                display: block;
+                                @include header-menu-link;
+                                padding: 5%;
+                                font-size: 14px;
+                                font-weight: 500;
+                                // height: inherit;
+                            }
+
+                            .headerContainer__lvl2List // <ul>
+                            {
+                                padding-left: 10px;
+                                list-style: none;
+                                // position: absolute;
+                                // right: 100vw;
+                                // opacity: 0;
+                            
+                            
+                            // .headerContainer__lvl2ListDisplayed // <ul>
+                            // {
+                                // position: absolute;
+                                // width: 240px;
+                                // background-color: #383838;
+                                // list-style: none;
+                                // padding-top: 20px;
+                                // padding-bottom: 20px;
+                                // padding-left: 0;
+                                // border-top-style: solid;
+                                // border-top-width: 3px;
+                                // border-top-color: #f7b500;
+                                
+                                .headerContainer__lvl2ListItem // <li>
+                                {
+                                    // padding-right: 20px;
+                                    padding-left: 10px;
+                                    // line-height: 2em;
+
+                                    .headerContainer__lvl2Link // <a>
+                                    {
+                                        @include header-menu-link;
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                        display: block;
+                                        width: 200px;
+                                        padding: 5%;
+                                    }
+                                }
+                            }
                         }
                     }
+                }
 
-                    .headerContainer__lvl1ListItem2 // <li>
+                .headerContainer__navigationHidden // <nav>
+                {
+                    position: absolute;
+                    right: 100vw;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 981px)
+{
+    .headerContainer // <header>
+    {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        width: 100vw;
+        height: 80px;
+        background-color: #383838;
+
+        .headerContainer__subContainer // <div>
+        {
+            display: flex;
+            width: 80vw;
+            height: inherit;
+            margin: 0 auto 0 auto;
+
+            .headerContainer__logo // <div>
+            {
+                display: flex;
+                width: 50%;
+                height: inherit;
+                align-items: center;
+            }
+
+            .headerContainer__menu // <div>
+            {
+                display: flex;
+                width: 50%;
+                height: inherit;
+                justify-content: right;
+                
+                .headerContainer__navigation // <nav>
+                {
+                    display: flex;
+                    // align-self: center;
+                    height: inherit;
+                    
+                    .headerContainer__lvl1List // <ul>
                     {
+                        display: flex;
                         height: inherit;
-                        line-height: 80px;
-                        padding-right: 22px;
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
 
-                        .headerContainer__lvl1Link2 // <a>
+                        .headerContainer__lvl1ListItem // <li>
                         {
-                            display: block;
-                            @include header-menu-link;
                             height: inherit;
-                        }
-
-                        .headerContainer__lvl2ListHidden // <ul>
-                        {
-                            position: absolute;
-                            right: 100vw;
-                            opacity: 0;
-                        }
-                        
-                        .headerContainer__lvl2ListDisplayed // <ul>
-                        {
-                            position: absolute;
-                            width: 240px;
-                            background-color: #383838;
-                            list-style: none;
-                            padding-top: 20px;
-                            padding-bottom: 20px;
-                            padding-left: 0;
-                            border-top-style: solid;
-                            border-top-width: 3px;
-                            border-top-color: #f7b500;
+                            line-height: 80px;
+                            padding-right: 22px;
                             
-                            .headerContainer__lvl2ListItem // <li>
+                            .headerContainer__lvl1Link // <a>
                             {
-                                padding-right: 20px;
-                                padding-left: 20px;
-                                line-height: 2em;
+                                display: block;
+                                @include header-menu-link;
+                                height: inherit;
+                            }
+                        }
 
-                                .headerContainer__lvl2Link // <a>
+                        .headerContainer__lvl1ListItem2 // <li>
+                        {
+                            height: inherit;
+                            line-height: 80px;
+                            padding-right: 22px;
+
+                            .headerContainer__lvl1Link2 // <a>
+                            {
+                                display: block;
+                                @include header-menu-link;
+                                height: inherit;
+                            }
+
+                            .headerContainer__lvl2ListHidden // <ul>
+                            {
+                                position: absolute;
+                                right: 100vw;
+                                opacity: 0;
+                            }
+                            
+                            .headerContainer__lvl2ListDisplayed // <ul>
+                            {
+                                position: absolute;
+                                width: 240px;
+                                background-color: #383838;
+                                list-style: none;
+                                padding-top: 20px;
+                                padding-bottom: 20px;
+                                padding-left: 0;
+                                border-top-style: solid;
+                                border-top-width: 3px;
+                                border-top-color: #f7b500;
+                                
+                                .headerContainer__lvl2ListItem // <li>
                                 {
-                                    @include header-menu-link;
-                                    display: block;
-                                    width: 200px;
-                                    padding: 6px 20px 6px 20px;
+                                    padding-right: 20px;
+                                    padding-left: 20px;
+                                    line-height: 2em;
+
+                                    .headerContainer__lvl2Link // <a>
+                                    {
+                                        @include header-menu-link;
+                                        display: block;
+                                        width: 200px;
+                                        padding: 6px 20px 6px 20px;
+                                    }
                                 }
                             }
                         }
