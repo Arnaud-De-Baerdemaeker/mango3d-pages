@@ -9,8 +9,11 @@
     text-decoration: none;
 }
 
-.mainContainer {
-    padding-top: 80px;
+@media (min-width: 981px) {
+    .mainContainer // <main>
+    {
+        padding-top: 80px;
+    }
 }
 
 $montserrat: "Montserrat";
