@@ -235,6 +235,14 @@
                                 display: block;
                                 @include header-menu-link;
                                 height: inherit;
+                                transition-property: color;
+                                transition-duration: 0.5s;
+                            }
+
+                            .headerContainer__lvl1Link:hover // <a>
+                            {
+                                @include header-menu-link;
+                                color: rgba(255, 255, 255, 0.6);
                             }
                         }
 
@@ -249,6 +257,19 @@
                                 display: block;
                                 @include header-menu-link;
                                 height: inherit;
+                                transition-property: color;
+                                transition-duration: 0.5s;
+
+                                .headerContainer__chevron
+                                {
+                                    margin-left: 10px;
+                                }
+                            }
+
+                            .headerContainer__lvl1Link2:hover // <a>
+                            {
+                                @include header-menu-link;
+                                color: rgba(255, 255, 255, 0.6);
                             }
 
                             .headerContainer__lvl2ListHidden // <ul>
@@ -283,6 +304,14 @@
                                         display: block;
                                         width: 200px;
                                         padding: 6px 20px 6px 20px;
+                                        transition-property: color;
+                                        transition-duration: 0.5s;
+                                    }
+
+                                    .headerContainer__lvl2Link:hover // <a>
+                                    {
+                                        @include header-menu-link;
+                                        color: rgba(255, 255, 255, 0.6);
                                     }
                                 }
                             }
