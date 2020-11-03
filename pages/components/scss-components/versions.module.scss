@@ -1,0 +1,71 @@
+@import "./intro.module.scss";
+
+.versions // <div>
+{
+    width: 80%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    
+    .versions__Container // <div>
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3%;
+        
+        .versions__stableContainer, .versions__betaContainer // <div>
+        {
+            background-color: #f2f2f2;
+            padding-bottom: 45px;
+
+            .versions__stableTitle, .versions__betaTitle // <div>
+            {
+                font-weight: 700;
+                text-transform: uppercase;
+                font-family: $OpenSans;
+                font-size: 25px;
+                color: #2d2d2d;
+                border-bottom-color: #333333;
+                margin-bottom: 3.093%;
+                padding-top: 26px;
+                padding-bottom: 24px;
+                border-bottom-style: solid;
+                border-bottom-width: 1px;
+            }
+
+            .versions__stableList, .versions__betaList // <ul>
+            {
+                list-style: none;
+                text-decoration: none;
+                padding: 0;
+                margin: 0;
+
+                .versions__stableListItem, .versions__betaListItem // <li>
+                {
+                    margin-bottom: 3.093%;
+
+                    .versions__stableLink, .versions__betaLink // <a>
+                    {
+                        color: $text-white;
+                        font-size: 30px;
+                        background-color: #ea647f;
+                        text-decoration: none;
+                        display: inline-block;
+                        padding: 18px 53px;
+                        min-width: 400px;
+                        line-height: 1.7em;
+                        border-radius: 3px;
+                        font-family: $OpenSans;
+                    }
+                }
+
+                .versions__stableListItem:last-of-type, .versions__betaListItem:last-of-type // <li>
+                {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
