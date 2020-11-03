@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Link from "next/link";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars} from "@fortawesome/free-solid-svg-icons";
+import {faBars, faChevronDown} from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./../scss-components/header.module.scss";
 
@@ -115,6 +115,12 @@ export default function Header() {
                                             styles.headerContainer__lvl1Link2
                                         }>
                                         {"Lychee Slicer"}
+                                        <FontAwesomeIcon
+                                            icon={faChevronDown}
+                                            className={
+                                                styles.headerContainer__chevron
+                                            }
+                                        />
                                     </a>
                                 </Link>
                                 <ul className={setClassName()}>
