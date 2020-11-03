@@ -1,27 +1,61 @@
-.iframeBackground // <div>
+@media (max-width: 980px)
 {
-    background-color: #353535;
-    padding-top: 13px;
-
-    .iframeContainer // <div>
+    .iframeBackground // <div>
     {
-        width: 80%;
-        margin-right: auto;
-        margin-left: auto;
-        background-color: rgb(255, 255, 255);
-        padding-top: 2%;
-        padding-bottom: 2%;
+        background-color: #353535;
+        padding-top: 13px;
 
-
-        .iframe // <iframe>
+        .iframeContainer // <div>
         {
-            display: block;
-            width: 800px;
-            height: 800px;
+            width: 80%;
             margin-right: auto;
             margin-left: auto;
-            overflow-y: scroll;
-            border-style: none;
+            background-color: rgb(255, 255, 255);
+            padding-top: 2%;
+            padding-bottom: 2%;
+
+
+            .iframe // <iframe>
+            {
+                display: block;
+                width: 100%;
+                height: 800px;
+                margin-right: auto;
+                margin-left: auto;
+                overflow-y: scroll;
+                border-style: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 981px)
+{
+    .iframeBackground // <div>
+    {
+        background-color: #353535;
+        padding-top: 13px;
+
+        .iframeContainer // <div>
+        {
+            width: 80%;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: rgb(255, 255, 255);
+            padding-top: 2%;
+            padding-bottom: 2%;
+
+
+            .iframe // <iframe>
+            {
+                display: block;
+                width: 800px;
+                height: 800px;
+                margin-right: auto;
+                margin-left: auto;
+                overflow-y: scroll;
+                border-style: none;
+            }
         }
     }
 }
