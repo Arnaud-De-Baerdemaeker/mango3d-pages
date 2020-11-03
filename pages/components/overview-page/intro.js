@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import DividerBottom from "./../general-components/divider-waves-bottom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faSearch} from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./../../components/scss-components/intro.module.scss";
 
@@ -93,6 +95,10 @@ function Intro() {
             <div className={styles.intro__whatsNew}>
                 <Link href={"#"}>
                     <a className={styles.intro__whatsNewLink}>
+                        <FontAwesomeIcon
+                            icon={faSearch}
+                            className={styles.intro__search}
+                        />
                         {"What's new in Lychee Slicer 3"}
                     </a>
                 </Link>
