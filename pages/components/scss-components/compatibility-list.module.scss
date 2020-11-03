@@ -61,13 +61,18 @@
             padding-top: 0.3em;
             padding-right: 0.7em;
             padding-bottom: 0.3em;
-            padding-left: 2em;
+            padding-left: 0.7em;
             background-color: #d1515c;
             color: rgb(255, 255, 255);
             text-decoration: none;
             border-radius: 3px;
             font-family: $OpenSans;
             line-height: 1.7em;
+
+            .compatibilityList__search
+            {
+                margin-right: 10px;
+            }
         }
     }
 }

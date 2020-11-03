@@ -61,6 +61,16 @@
                             line-height: 1.7em;
                             border-radius: 3px;
                             font-family: $OpenSans;
+
+                            .versions__cloud
+                            {
+                                padding-right: 10px;
+                            }
+                        }
+
+                        .versions__stableLink:hover, .versions__betaLink:hover // <a>
+                        {
+                            transform: scale(1.1)
                         }
                     }
 
@@ -134,6 +144,16 @@
                             line-height: 1.7em;
                             border-radius: 3px;
                             font-family: $OpenSans;
+
+                            .versions__cloud
+                            {
+                                padding-right: 10px;
+                            }
+                        }
+
+                        .versions__stableLink:hover, .versions__betaLink:hover // <a>
+                        {
+                            transform: scale(1.1);
                         }
                     }
 
