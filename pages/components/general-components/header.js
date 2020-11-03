@@ -10,10 +10,12 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [width, setWidth] = useState();
 
+    // Get the value of the current screen size
     useEffect(() => {
         setWidth(window.innerWidth);
     }, []);
 
+    // Uses the value of the screen size to determine which CSS class to put on the tag
     const displayBurgerIcon = () => {
         if (width <= 980) {
             return styles.headerContainer__hamburgerIcon;
@@ -22,6 +24,8 @@ export default function Header() {
         return styles.headerContainer__hamburgerIconHidden;
     };
 
+    // Uses the value of the screen size to determine which CSS class to put on the tag
+    // Also checks with ternary function to see if the element is hovered or not
     const setClassName = () => {
         if (width >= 981) {
             return isHovered
@@ -32,10 +36,13 @@ export default function Header() {
         return styles.headerContainer__lvl2List;
     };
 
+    // Function to change the state on the click
     const handleClick = () => {
         setIsOpen(!isOpen);
     };
 
+    // Uses the value of the screen size to determine which CSS class to put on the tag
+    // Also checks with ternary function to see if the element is hovered or not
     const handleMenuDisplay = () => {
         if (width <= 980) {
             return isOpen
