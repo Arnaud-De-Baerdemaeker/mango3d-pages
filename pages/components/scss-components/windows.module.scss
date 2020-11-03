@@ -1,0 +1,33 @@
+@import "./index.module.scss";
+
+.windowsUsers // <div>
+{
+    width: 80%;
+    margin: 11px auto 14px auto;
+    background-color: #0c71c3;
+    text-align: center;
+
+    .windows__Container // <div>
+    {
+        padding: 23px 14px;
+        
+        .windows__title // <h2>
+        {
+            color: $text-white;
+            font-family: $montserrat;
+            margin: 0;
+            font-size: 26px;
+            font-weight: 500;
+            line-height: 1em;
+            padding-bottom: 10px;
+        }
+
+        .windows__text // <p>
+        {
+            color: $text-white;
+            margin: 0;
+            font-family: $OpenSans;
+            font-size: 14px;
+        }
+    }
+}
