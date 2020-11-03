@@ -1,6 +1,7 @@
 .iframeBackground // <div>
 {
     background-color: #353535;
+    padding-top: 13px;
 
     .iframeContainer // <div>
     {
@@ -8,6 +9,9 @@
         margin-right: auto;
         margin-left: auto;
         background-color: rgb(255, 255, 255);
+        padding-top: 2%;
+        padding-bottom: 2%;
+
 
         .iframe // <iframe>
         {
