@@ -1,74 +1,152 @@
 @import "./index.module.scss";
 
-.intro // <div>
+@media (max-width: 980px)
 {
-    padding: 2% 0;
-    width: 80%;
-    margin-top: 80px;
-    margin-right: auto;
-    margin-left: auto;
-
-    .intro__logo // <div>
+    .intro // <div>
     {
-        margin-bottom: 5px;
+        padding: 17px 0;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
 
-        .intro__imageContainer // <figure>
+        .intro__logo // <div>
         {
-            margin-top: 0;
-            margin-right: auto;
-            margin-bottom: 0;
-            margin-left: auto;
-            width: 100px;
-            
-            .intro__image // <img>
+            margin-bottom: 5px;
+
+            .intro__imageContainer // <figure>
             {
-                width: 100%;
+                margin-top: 0;
+                margin-right: auto;
+                margin-bottom: 0;
+                margin-left: auto;
+                width: 100px;
+                
+                .intro__image // <img>
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+        .intro__titleContainer // <div>
+        {
+            margin-top: 17px;
+
+            .intro__mainTitle // <h1>
+            {
+                font-family: $Comfortaa;
+                font-size: 38px;
+                text-transform: uppercase;
+                font-weight: 700;
+                text-align: center;
+                color: #141414;
+                padding-bottom: 10px;
+                margin: 0;
+            }
+
+            .intro__subTitle // <h3>
+            {
+                margin: 0;
+                font-family: $Comfortaa;
+                font-size: 19px;
+                font-weight: 600;
+                color: #141414;
+                text-align: center;
+                line-height: 1em;
+                padding-bottom: 10px;
+            }
+        }
+
+        .intro__infoContainer // <div>
+        {
+            margin-top: 22px;
+
+            .intro__info // <p>
+            {
+                margin: 0;
+                font-weight: 700;
+                font-family: $OpenSans;
+                font-size: 14px;
+                text-align: center;
+                color: #2d2d2d;
+                line-height: 1.7em;
             }
         }
     }
+}
 
-    .intro__titleContainer // <div>
+@media (min-width: 981px)
+{
+    .intro // <div>
     {
-        margin-top: 17px;
+        padding: 2% 0;
+        width: 80%;
+        margin-top: 80px;
+        margin-right: auto;
+        margin-left: auto;
 
-        .intro__mainTitle // <h1>
+        .intro__logo // <div>
         {
-            font-family: $Comfortaa;
-            font-size: 38px;
-            text-transform: uppercase;
-            font-weight: 700;
-            text-align: center;
-            color: #141414;
-            padding-bottom: 10px;
-            margin: 0;
+            margin-bottom: 5px;
+
+            .intro__imageContainer // <figure>
+            {
+                margin-top: 0;
+                margin-right: auto;
+                margin-bottom: 0;
+                margin-left: auto;
+                width: 100px;
+                
+                .intro__image // <img>
+                {
+                    width: 100%;
+                }
+            }
         }
 
-        .intro__subTitle // <h3>
+        .intro__titleContainer // <div>
         {
-            margin: 0;
-            font-family: $Comfortaa;
-            font-size: 19px;
-            font-weight: 600;
-            color: #141414;
-            text-align: center;
-            line-height: 1em;
-            padding-bottom: 10px;
+            margin-top: 17px;
+
+            .intro__mainTitle // <h1>
+            {
+                font-family: $Comfortaa;
+                font-size: 38px;
+                text-transform: uppercase;
+                font-weight: 700;
+                text-align: center;
+                color: #141414;
+                padding-bottom: 10px;
+                margin: 0;
+            }
+
+            .intro__subTitle // <h3>
+            {
+                margin: 0;
+                font-family: $Comfortaa;
+                font-size: 19px;
+                font-weight: 600;
+                color: #141414;
+                text-align: center;
+                line-height: 1em;
+                padding-bottom: 10px;
+            }
         }
-    }
 
-    .intro__infoContainer // <div>
-    {
-        margin-top: 22px;
-
-        .intro__info // <p>
+        .intro__infoContainer // <div>
         {
-            margin: 0;
-            font-weight: 700;
-            font-family: $OpenSans;
-            font-size: 14px;
-            text-align: center;
-            color: #2d2d2d;
-            line-height: 1.7em;
+            margin-top: 22px;
+
+            .intro__info // <p>
+            {
+                margin: 0;
+                font-weight: 700;
+                font-family: $OpenSans;
+                font-size: 14px;
+                text-align: center;
+                color: #2d2d2d;
+                line-height: 1.7em;
+            }
         }
     }
 }
