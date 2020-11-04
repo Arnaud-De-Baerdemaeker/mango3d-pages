@@ -31,3 +31,4 @@ yarn-error.log*
 .eslintcache
 .eslintrc.js
 .prettierrc
+.unotes/unotes_meta.json
