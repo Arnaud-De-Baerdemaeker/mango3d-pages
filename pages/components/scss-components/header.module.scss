@@ -212,13 +212,13 @@
                                 display: block;
                                 @include header-menu-link;
                                 height: inherit;
-                                transition-property: color;
-                                transition-duration: 0.5s;
                             }
 
                             .headerContainer__lvl1Link:hover // <a>
                             {
                                 @include header-menu-link;
+                                transition-property: color;
+                                transition-duration: 0.5s;
                                 color: rgba(255, 255, 255, 0.6);
                             }
                         }
@@ -234,8 +234,7 @@
                                 display: block;
                                 @include header-menu-link;
                                 height: inherit;
-                                transition-property: color;
-                                transition-duration: 0.5s;
+                                
 
                                 .headerContainer__chevron
                                 {
@@ -247,6 +246,8 @@
                             {
                                 @include header-menu-link;
                                 color: rgba(255, 255, 255, 0.6);
+                                transition-property: color;
+                                transition-duration: 0.5s;
                             }
 
                             .headerContainer__lvl2ListHidden // <ul>
