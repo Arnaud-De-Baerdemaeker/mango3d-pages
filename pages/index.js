@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Header from "./components/general-components/header";
 import Title from "./components/overview-page/title";
 import Intro from "./components/overview-page/intro";
@@ -12,6 +12,20 @@ import BackToTop from "./components/general-components/back-to-top";
 import styles from "./components/scss-components/index.module.scss";
 
 function LycheeSlicer() {
+    const [scrollValue, setScrollValue] = useState();
+
+    // const element = document.querySelector("#button");
+
+    useEffect(() => {
+        document.addEventListener("scroll", () => {
+            setScrollValue(window.pageYOffset);
+        });
+    }, []);
+
+    // const scrollToTop = () => {
+    //     console.log(element.scrollTop = 0);
+    // };
+
     return (
         <>
             <style jsx global>
@@ -28,7 +42,7 @@ function LycheeSlicer() {
                 <RealtimeOperations />
                 <CompatibilityList />
                 <Footer />
-                <BackToTop />
+                <BackToTop scrollValue={scrollValue} />
             </main>
         </>
     );
