@@ -7,12 +7,21 @@ import {faBars} from "@fortawesome/free-solid-svg-icons";
 import styles from "./../scss-components/footer.module.scss";
 
 function Footer() {
-    // const [isDisplayed, setIsDisplayed] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [width, setWidth] = useState();
 
     useEffect(() => {
         setWidth(window.innerWidth);
+
+        // Listens the resize event and updates the state
+        const handleResize = () => {
+            setWidth(window.innerWidth);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        // Clean-up function
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     const handleClick = () => {
