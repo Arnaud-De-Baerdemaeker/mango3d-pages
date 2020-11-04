@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Link from "next/link";
+import BactToTop from "./back-to-top";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars, faChevronDown} from "@fortawesome/free-solid-svg-icons";
 
@@ -13,6 +14,14 @@ export default function Header() {
     // Get the value of the current screen size
     useEffect(() => {
         setWidth(window.innerWidth);
+
+        const handleResize = () => {
+            setWidth(window.innerWidth);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     // Uses the value of the screen size to determine which CSS class to put on the tag
@@ -55,6 +64,7 @@ export default function Header() {
 
     return (
         <header className={styles.headerContainer}>
+            <BactToTop />
             <div className={styles.headerContainer__subContainer}>
                 <div className={styles.headerContainer__logo}>
                     <Link href={"/"}>
