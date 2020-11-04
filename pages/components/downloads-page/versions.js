@@ -6,6 +6,7 @@ import {faCloudDownloadAlt} from "@fortawesome/free-solid-svg-icons";
 import styles from "./../scss-components/versions.module.scss";
 
 function Versions({data}) {
+    // Get the name from the JSON and transforms it to remove the space between
     const name = data.name.en;
     const nameNoSpace = name.split(" ").join("");
 
