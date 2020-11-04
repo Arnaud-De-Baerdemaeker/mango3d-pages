@@ -35,16 +35,11 @@
             .headerContainer__menu // <div>
             {
                 width: 45%;
-                // height: inherit;
-                // justify-content: right;
                 display: flex;
                 justify-content: right;
 
                 .headerContainer__hamburgerIcon // <div>
                 {
-                    // position: absolute;
-                    // right: 0;
-                    // top: 50%;
                     align-self: center;
                     cursor: pointer;
 
@@ -65,12 +60,8 @@
                 
                 .headerContainer__navigation // <nav>
                 {
-                    // height: inherit;
-                    
                     .headerContainer__lvl1List // <ul>
                     {
-                        // display: flex;
-                        // height: inherit;
                         position: absolute;
                         top: 79px;
                         left: 0;
@@ -86,10 +77,6 @@
 
                         .headerContainer__lvl1ListItem // <li>
                         {
-                            // height: inherit;
-                            // line-height: 80px;
-                            // padding-right: 22px;
-                            
                             .headerContainer__lvl1Link // <a>
                             {
                                 display: block;
@@ -97,15 +84,11 @@
                                 padding: 5%;
                                 font-size: 14px;
                                 font-weight: 500;
-                                // height: inherit;
                             }
                         }
 
                         .headerContainer__lvl1ListItem2 // <li>
                         {
-                            // height: inherit;
-                            // line-height: 80px;
-                            // padding-right: 22px;
                             padding-left: 5%;
 
                             .headerContainer__lvl1Link2 // <a>
@@ -115,36 +98,21 @@
                                 padding: 5%;
                                 font-size: 14px;
                                 font-weight: 500;
-                                // height: inherit;
+
+                                .headerContainer__chevron
+                                {
+                                    display: none;
+                                }
                             }
 
                             .headerContainer__lvl2List // <ul>
                             {
                                 padding-left: 10px;
                                 list-style: none;
-                                // position: absolute;
-                                // right: 100vw;
-                                // opacity: 0;
-                            
-                            
-                            // .headerContainer__lvl2ListDisplayed // <ul>
-                            // {
-                                // position: absolute;
-                                // width: 240px;
-                                // background-color: #383838;
-                                // list-style: none;
-                                // padding-top: 20px;
-                                // padding-bottom: 20px;
-                                // padding-left: 0;
-                                // border-top-style: solid;
-                                // border-top-width: 3px;
-                                // border-top-color: #f7b500;
                                 
                                 .headerContainer__lvl2ListItem // <li>
                                 {
-                                    // padding-right: 20px;
                                     padding-left: 10px;
-                                    // line-height: 2em;
 
                                     .headerContainer__lvl2Link // <a>
                                     {
@@ -174,6 +142,16 @@
 
 @media (min-width: 981px)
 {
+    @keyframes appear {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
     .headerContainer // <header>
     {
         position: fixed;
@@ -213,7 +191,6 @@
                 .headerContainer__navigation // <nav>
                 {
                     display: flex;
-                    // align-self: center;
                     height: inherit;
                     
                     .headerContainer__lvl1List // <ul>
@@ -291,6 +268,8 @@
                                 border-top-style: solid;
                                 border-top-width: 3px;
                                 border-top-color: #f7b500;
+                                animation-name: appear;
+                                animation-duration: 0.5s;
                                 
                                 .headerContainer__lvl2ListItem // <li>
                                 {
@@ -301,17 +280,16 @@
                                     .headerContainer__lvl2Link // <a>
                                     {
                                         @include header-menu-link;
+                                        color: $text-white;
                                         display: block;
                                         width: 200px;
                                         padding: 6px 20px 6px 20px;
-                                        transition-property: color;
-                                        transition-duration: 0.5s;
                                     }
 
                                     .headerContainer__lvl2Link:hover // <a>
                                     {
-                                        @include header-menu-link;
                                         color: rgba(255, 255, 255, 0.6);
+                                        transition-duration: 0.5s;
                                     }
                                 }
                             }
