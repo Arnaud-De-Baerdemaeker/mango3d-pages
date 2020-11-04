@@ -70,6 +70,12 @@
                     color: #e8ac17;
                     font-size: 32px;
                 }
+
+                .networks__link:hover // <a>
+                {
+                    color: rgba(232, 172, 23, 0.6);
+                    transition-duration: 0.5s;
+                }
             }
         }
     }
