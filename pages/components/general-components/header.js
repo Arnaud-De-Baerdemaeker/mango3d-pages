@@ -15,12 +15,14 @@ export default function Header() {
     useEffect(() => {
         setWidth(window.innerWidth);
 
+        // Listens the resize event and updates the state
         const handleResize = () => {
             setWidth(window.innerWidth);
         };
 
         window.addEventListener("resize", handleResize);
 
+        // Clean-up function
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
@@ -138,7 +140,7 @@ export default function Header() {
                                         className={
                                             styles.headerContainer__lvl2ListItem
                                         }>
-                                        <Link href={"#"}>
+                                        <Link href={"/"}>
                                             <a
                                                 className={
                                                     styles.headerContainer__lvl2Link
