@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState, useEffect} from "react";
 import Header from "./components/general-components/header";
 import Title from "./components/overview-page/title";
 import Intro from "./components/overview-page/intro";
@@ -14,23 +14,21 @@ import styles from "./components/scss-components/index.module.scss";
 function LycheeSlicer() {
     const [scrollValue, setScrollValue] = useState();
 
-    // const element = document.querySelector("#button");
-
     useEffect(() => {
-        document.addEventListener("scroll", () => {
+        const getScrollValue = () => {
             setScrollValue(window.pageYOffset);
-        });
-    }, []);
+        };
 
-    // const scrollToTop = () => {
-    //     console.log(element.scrollTop = 0);
-    // };
+        window.onscroll = function () {
+            getScrollValue();
+        };
+    }, []);
 
     return (
         <>
             <style jsx global>
                 {
-                    "*{ box-sizing: border-box; } body{ margin: 0px; color: rgb(102, 102, 102); -webkit-font-smoothing: antialiased; font-weight: 500; }"
+                    "*{ box-sizing: border-box; scroll-behavior: smooth; } body{ margin: 0px; color: rgb(102, 102, 102); -webkit-font-smoothing: antialiased; font-weight: 500; }"
                 }
             </style>
             <Header />
