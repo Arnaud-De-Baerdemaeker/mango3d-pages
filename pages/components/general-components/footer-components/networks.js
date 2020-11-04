@@ -16,10 +16,12 @@ import styles from "./../../scss-components/networks.module.scss";
 function Networks({isOpen}) {
     const [width, setWidth] = useState();
 
+    // Get the value of the screen's width
     useEffect(() => {
         setWidth(window.innerWidth);
     }, []);
 
+    // Set the className following the width of the screen
     const handleDisplayOnWidth = () => {
         if (width <= 980) {
             return isOpen ? styles.networks : styles.networksHidden;

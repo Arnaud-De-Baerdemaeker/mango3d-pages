@@ -6,6 +6,7 @@ import {faArrowAltCircleRight} from "@fortawesome/free-solid-svg-icons";
 import styles from "./../scss-components/title.module.scss";
 
 function Title() {
+    // Handles the appearance of the icon when hovering
     const [isButton1Hovered, setIsButton1Hovered] = useState(false);
     const [isButton2Hovered, setIsButton2Hovered] = useState(false);
 
